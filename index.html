@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="controls">
+    <button data-sort="geography">location</button>
+    <button data-sort="color">colour</button>
+    <button data-sort="type">context</button>
+    <button data-sort="content">content</button>
+  </div>
+
+  <div id="gallery"></div>
+
+<div id="filters">
+
+  <!-- GEOGRAPHY -->
+  <button data-filter-type="geography" data-filter-value="London">london</button>
+  <button data-filter-type="geography" data-filter-value="Paris">paris</button>
+  <button data-filter-type="geography" data-filter-value="England">england</button>
+  <button data-filter-type="geography" data-filter-value="Berlin">berlin</button>
+  <button data-filter-type="geography" data-filter-value="Italy">italy</button>
+  <button data-filter-type="geography" data-filter-value="India">india</button>
+  <button data-filter-type="geography" data-filter-value="Greece">greece</button>
+  <button data-filter-type="geography" data-filter-value="Basel">basel</button>
+
+  <!-- COLOR -->
+  <button data-filter-type="color" data-filter-value="grey_light">light greys</button>
+  <button data-filter-type="color" data-filter-value="grey_dark">dark greys</button>
+  <button data-filter-type="color" data-filter-value="green">greens</button>
+  <button data-filter-type="color" data-filter-value="yellow">yellows</button>
+  <button data-filter-type="color" data-filter-value="red">reds</button>
+  <button data-filter-type="color" data-filter-value="blue">blues</button>
+
+  <!-- TYPE -->
+  <button data-filter-type="type" data-filter-value="city_edge">urban edge</button>
+  <button data-filter-type="type" data-filter-value="city_centre">urban centre</button>
+  <button data-filter-type="type" data-filter-value="rural">rural</button>
+  <button data-filter-type="type" data-filter-value="town">town</button>
+
+  <!-- CONTENT -->
+  <button data-filter-type="content" data-filter-value="construction_site">construction sites</button>
+  <button data-filter-type="content" data-filter-value="vehicle">vehicles</button>
+  <button data-filter-type="content" data-filter-value="landscape">landscapes</button>
+  <button data-filter-type="content" data-filter-value="building_far">buildings (far)</button>
+  <button data-filter-type="content" data-filter-value="building_near">building (close)</button>
+  <button data-filter-type="content" data-filter-value="space">spaces</button>
+
+  <!-- CLEAR -->
+  <button data-clear>show all</button>
+
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

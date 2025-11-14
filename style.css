@@ -1,0 +1,92 @@
+body {
+  background: #e2e1dc;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#controls {
+  position: fixed;      /* stays in place when clusters move */
+  top: 20px;            /* distance from top of viewport */
+  left: 50%;
+  transform: translateX(-50%); /* center horizontally */
+  display: flex;
+  gap: 10px;
+  font-family: Garamond, serif;  /* your serif font */
+  z-index: 1000;
+}
+
+#filters {
+  position: fixed;
+  bottom: 20px;        /* distance from bottom of viewport */
+  z-index: 3000;       /* above everything */
+  padding: 10px 10vw;
+  gap: 5px;
+}
+
+#controls button {
+  background: none;     /* remove default button background */
+  border: none;         /* remove border */
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: inherit; /* inherit serif from parent */
+  font-size: 16px;
+}
+
+
+#gallery {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+}
+
+.photo {
+  position: absolute;
+  transition: left 0.3s ease, top 0.3s ease, width 1s ease;
+  z-index: 1;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  max-height: 70px;
+  max-width: 7vw;
+  display: block;
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+  object-fit: contain;
+}
+
+.photo:hover img {
+  transform: scale(5); /* doubles the image size */
+}
+
+
+.photo:hover {
+  z-index: 2; /* keep enlarged photo on top */
+}
+
+.photo.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.hidden {
+  display: none !important;
+}
+
+button {
+  font-family: "Garamond", "Times New Roman", serif;
+  background: none;       /* removes default background */
+  border: none;           /* removes border/surround */
+  color: #333;            /* dark grey text for warmth */
+  font-size: 0.85rem;      /* slightly larger text */
+  cursor: pointer;        /* keeps pointer interaction */
+  padding: 0.1em 0.4em;   /* gives some breathing space */
+  transition: color 0.2s ease;
+}
+
+button:hover {
+  color: #a35d2a; /* warm brownish accent on hover */
+}
