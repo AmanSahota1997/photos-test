@@ -190,37 +190,38 @@ input[type="range"]::-ms-fill-upper {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    flex-wrap: nowrap;          /* force all sliders on one line */
-    justify-content: space-between; /* spread sliders evenly */
-    gap: 1vw;                   /* small spacing between sliders */
-    max-width: 80vw;             /* container never wider than 80% of viewport */
+    flex-wrap: nowrap;
+    justify-content: center; /* center sliders */
+    gap: 3vw;               /* small gap between sliders */
+    max-width: 80vw;         /* container never wider than 80% of viewport */
+    padding: 0 5vw;          /* optional: extra buffer at edges */
   }
 
   #sliders input[type="range"] {
-    width: calc((80vw - 2vw) / 3); /* divide available width among 3 sliders minus gaps */
-    max-width: none;               /* remove previous max-width */
+    width: calc((80vw - 2 * 5vw - 2 * 3vw) / 3); /* divide space among 3 sliders */
+    max-width: none;        /* ignore previous fixed max-width */
   }
 
-  /* Webkit browsers (Chrome, Safari, Edge) */
+  /* Webkit thumb */
   #sliders input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
     width: 14px;
     height: 14px;
-    padding: 7px;                  /* easier to tap */
+    padding: 7px;
     cursor: pointer;
   }
 
-  /* Firefox */
+  /* Firefox thumb */
   #sliders input[type="range"]::-moz-range-thumb {
     width: 14px;
     height: 14px;
     cursor: pointer;
   }
 
-  /* IE / Edge Legacy */
+  /* IE / Edge thumb */
   #sliders input[type="range"]::-ms-thumb {
     width: 14px;
     height: 14px;
     cursor: pointer;
   }
 }
+
